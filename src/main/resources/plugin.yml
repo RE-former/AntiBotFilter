@@ -1,0 +1,4 @@
+name: AntiBotFilter
+version: '${project.version}'
+main: com.reformer.antibotfilter.AntiBotFilter
+api-version: 1.17
