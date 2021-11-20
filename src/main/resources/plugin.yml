@@ -2,3 +2,7 @@ name: AntiBotFilter
 version: '${project.version}'
 main: com.reformer.antibotfilter.AntiBotFilter
 api-version: 1.17
+commands:
+  addbadIP:
+    description: Allows you to blacklist a IP.
+    usage: /<command> IP
