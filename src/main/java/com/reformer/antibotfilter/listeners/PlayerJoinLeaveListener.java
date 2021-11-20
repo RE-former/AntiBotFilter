@@ -1,6 +1,7 @@
 package com.reformer.antibotfilter.listeners;
 
 
+import com.reformer.antibotfilter.AntiBotFilter;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -11,21 +12,24 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class PlayerJoinLeaveListener implements Listener {
+    JavaPlugin plugin = AntiBotFilter.getPlugin(AntiBotFilter.class);
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
-        List<String> badips = Arrays.asList("1.1.1.1","127.0.0.1");
         Player player = (Player) e.getPlayer();
         String playerIP = player.getAddress().getAddress().getHostAddress();
+
+        List<String> badips = plugin.getConfig().getStringList("blacklistIPs");
+
         if(badips.contains(playerIP)){
-            player.kickPlayer("Your IP is blacklisted");
+            player.kickPlayer(ChatColor.RED + "Your IP is blacklisted");
         }
-        player.sendMessage("Your IP is:- " + playerIP);
 
         List<String> listOfColors = Arrays.asList("red", "cyan", "green", "purple", "pink", "brown", "yellow", "gray", "black");
         int indexColor = (int)(Math.random()*listOfColors.size());

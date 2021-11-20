@@ -8,6 +8,10 @@ public final class AntiBotFilter extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // Loading config
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
         // Registering events
         getServer().getPluginManager().registerEvents(new PlayerJoinLeaveListener(), this);
         getServer().getPluginManager().registerEvents(new InventoryClickListener(), this);
