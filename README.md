@@ -1,8 +1,7 @@
 
 # AntiBotFilter v1.0
 
-Idk its just a plugin to protect your server from stupid bots
-
+This is a very simple verification system plugin that shows a user a gui with colors. If the user selects the correct answer, he gats granted to the server, otherwise he gets kicked. More updates are to come soon.
 
 ## Demo's Screenshot's
 
