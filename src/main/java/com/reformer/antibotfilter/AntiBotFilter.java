@@ -1,11 +1,9 @@
 package com.reformer.antibotfilter;
 
-import com.reformer.antibotfilter.commands.BlacklistIPCommand;
-import com.reformer.antibotfilter.commands.WhitelistIPCommand;
 import com.reformer.antibotfilter.listeners.InventoryClickListener;
 import com.reformer.antibotfilter.listeners.InventoryCloseListener;
-import com.reformer.antibotfilter.listeners.PlayerJoinLeaveListener;
-import org.bukkit.entity.Player;
+import com.reformer.antibotfilter.listeners.JoinIPCheckListener;
+import com.reformer.antibotfilter.listeners.InventoryOnJoinListener;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -23,12 +21,10 @@ public final class AntiBotFilter extends JavaPlugin {
         saveDefaultConfig();
 
         // Registering events
-        getServer().getPluginManager().registerEvents(new PlayerJoinLeaveListener(), this);
+        getServer().getPluginManager().registerEvents(new InventoryOnJoinListener(), this);
+        getServer().getPluginManager().registerEvents(new JoinIPCheckListener(), this);
         getServer().getPluginManager().registerEvents(new InventoryClickListener(), this);
         getServer().getPluginManager().registerEvents(new InventoryCloseListener(), this);
-        getCommand("blacklistip").setExecutor(new BlacklistIPCommand());
-        getCommand("whitelistip").setExecutor(new WhitelistIPCommand());
-
 
         // Plugin startup logic
         getLogger().info("AntiBotFilter started");
