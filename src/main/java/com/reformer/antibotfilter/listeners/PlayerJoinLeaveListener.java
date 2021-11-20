@@ -1,6 +1,5 @@
 package com.reformer.antibotfilter.listeners;
 
-
 import com.reformer.antibotfilter.AntiBotFilter;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
