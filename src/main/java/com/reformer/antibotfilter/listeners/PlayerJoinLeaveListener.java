@@ -2,6 +2,7 @@ package com.reformer.antibotfilter.listeners;
 
 import com.reformer.antibotfilter.AntiBotFilter;
 import net.md_5.bungee.api.ChatColor;
+import org.apache.commons.lang.RandomStringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -19,6 +20,8 @@ import java.util.List;
 public class PlayerJoinLeaveListener implements Listener {
     JavaPlugin plugin = AntiBotFilter.getPlugin(AntiBotFilter.class);
 
+
+
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player player = (Player) e.getPlayer();
@@ -35,7 +38,6 @@ public class PlayerJoinLeaveListener implements Listener {
         String randomColor = listOfColors.get(indexColor);
 
         Inventory inv = Bukkit.createInventory(null, 9, ChatColor.translateAlternateColorCodes('&', "&2&lClick on the " + randomColor + " pane"));
-        e.getPlayer().openInventory(inv);
 
         List<Material> listOfPanes = Arrays.asList(Material.RED_STAINED_GLASS_PANE, Material.CYAN_STAINED_GLASS_PANE, Material.GREEN_STAINED_GLASS_PANE, Material.PURPLE_STAINED_GLASS_PANE, Material.PINK_STAINED_GLASS_PANE, Material.BROWN_STAINED_GLASS_PANE, Material.YELLOW_STAINED_GLASS_PANE, Material.GRAY_STAINED_GLASS_PANE, Material.BLACK_STAINED_GLASS_PANE);
 
@@ -51,6 +53,8 @@ public class PlayerJoinLeaveListener implements Listener {
             inv.setMaxStackSize(1);
         }
 
+        e.getPlayer().openInventory(inv);
+        AntiBotFilter.playerVerify.put(player.getUniqueId(), inv);
 
     }
 
