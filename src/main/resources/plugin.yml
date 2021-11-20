@@ -2,10 +2,8 @@ name: AntiBotFilter
 version: '${project.version}'
 main: com.reformer.antibotfilter.AntiBotFilter
 api-version: 1.17
-commands:
-  blacklistip:
-    description: Allows you to blacklist a IP.
-    usage: /<command> <IP>
-  whitelistip:
-    description: Allows you to remove a blacklisted IP.
-    usage: /<command> <IP>
+authors:
+  - AmazinAmazon
+  - Vertixx
+description: Simple verification system plugin
+
