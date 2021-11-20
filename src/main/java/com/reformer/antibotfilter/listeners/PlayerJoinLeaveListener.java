@@ -9,11 +9,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class PlayerJoinLeaveEvent implements Listener {
+public class PlayerJoinLeaveListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
@@ -30,10 +31,14 @@ public class PlayerJoinLeaveEvent implements Listener {
         while (inv.firstEmpty() != -1) {
             int indexMaterial = (int)(Math.random()*listOfPanes.size());
             ItemStack itemStack = new ItemStack(listOfPanes.get(indexMaterial));
+
+            ItemMeta itemMeta = itemStack.getItemMeta();
+            itemMeta.setDisplayName(" ");
+            itemStack.setItemMeta(itemMeta);
+
             inv.addItem(itemStack);
             inv.setMaxStackSize(1);
         }
-
 
     }
 
