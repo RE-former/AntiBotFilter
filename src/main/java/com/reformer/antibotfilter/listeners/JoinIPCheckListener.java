@@ -33,8 +33,10 @@ public class JoinIPCheckListener implements Listener {
                 con.disconnect();
 
                 danger = dangerLevelInt;
-                if (dangerLevelInt < 0) {
-                    player.kickPlayer(ChatColor.RED + "Your IP is flagged. Please try rejoining later.");
+                if (!player.hasPermission("antibotfilter.ipbypass")) {
+                    if (dangerLevelInt < 0) {
+                        player.kickPlayer(ChatColor.RED + "Your IP is flagged. Please try rejoining later.");
+                    }
                 }
                 plugin.getLogger().info(ChatColor.RED + player.getName() + "'s IP danger level: " + dangerLevelInt);
             } catch (IOException ex) {

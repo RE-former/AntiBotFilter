@@ -6,4 +6,7 @@ authors:
   - AmazinAmazon
   - Vertixx
 description: Simple verification system plugin
-
+commands:
+  verify:
+    description: Forces a player to verify
+    usage: /<command> <player>
