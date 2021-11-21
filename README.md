@@ -5,5 +5,6 @@ This is a very simple verification system plugin that shows a user a gui with co
 
 ## Plugin screenshots
 
-![App Screenshot](https://user-images.githubusercontent.com/55412636/142719687-219e5cc6-16df-455b-bb08-dcd595933bb2.png)
+![image](https://user-images.githubusercontent.com/55412636/142719687-219e5cc6-16df-455b-bb08-dcd595933bb2.png)
+![image](https://user-images.githubusercontent.com/55412636/142778711-23d5dbca-dfca-45ca-b194-7f00e0fcfd25.png)
 
