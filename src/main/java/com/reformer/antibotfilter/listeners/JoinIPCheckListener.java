@@ -38,6 +38,7 @@ public class JoinIPCheckListener implements Listener {
                         player.kickPlayer(ChatColor.RED + "Your IP is flagged. Please try rejoining later.");
                     }
                 }
+
                 plugin.getLogger().info(ChatColor.RED + player.getName() + "'s IP danger level: " + dangerLevelInt);
             } catch (IOException ex) {
                 ex.printStackTrace();

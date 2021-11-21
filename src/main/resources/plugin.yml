@@ -1,7 +1,7 @@
 name: AntiBotFilter
 version: '${project.version}'
 main: com.reformer.antibotfilter.AntiBotFilter
-api-version: 1.17
+api-version: 1.16
 authors:
   - AmazinAmazon
   - Vertixx

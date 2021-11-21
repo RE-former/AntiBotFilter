@@ -22,7 +22,7 @@ public class VerifyCommand implements CommandExecutor {
                 sender.sendMessage(ChatColor.RED + "Please provide a player");
             }
         } else {
-            sender.sendMessage(ChatColor.RED + "You do not have permission to execute this command (antibotfilter.verify");
+            sender.sendMessage(ChatColor.RED + "You do not have permission to execute this command (antibotfilter.verify)");
         }
         return true;
     }

@@ -13,7 +13,8 @@ public class InventoryCloseListener implements Listener {
     JavaPlugin plugin = AntiBotFilter.getPlugin(AntiBotFilter.class);
     @EventHandler
     public void onInvClose(InventoryCloseEvent e) {
-        if (e.getPlayer() instanceof Player player) {
+        if (e.getPlayer() instanceof Player) {
+            Player player = (Player) e.getPlayer();
             if (e.getView().getTitle().contains(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the "))) {
                 if (AntiBotFilter.playerVerify.containsKey(player.getUniqueId())) {
                     Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
