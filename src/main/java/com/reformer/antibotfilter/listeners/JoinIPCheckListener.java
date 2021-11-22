@@ -16,7 +16,6 @@ import java.net.URL;
 
 public class JoinIPCheckListener implements Listener {
     JavaPlugin plugin = AntiBotFilter.getPlugin(AntiBotFilter.class);
-    public static int danger;
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
@@ -32,9 +31,8 @@ public class JoinIPCheckListener implements Listener {
                 reader.close();
                 con.disconnect();
 
-                danger = dangerLevelInt;
                 if (!player.hasPermission("antibotfilter.ipbypass")) {
-                    if (dangerLevelInt < 0) {
+                    if (dangerLevelInt > 0) {
                         player.kickPlayer(ChatColor.RED + "Your IP is flagged. Please try rejoining later.");
                     }
                 }

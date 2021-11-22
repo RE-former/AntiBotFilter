@@ -16,9 +16,9 @@ public class VerifyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender.hasPermission("antibotfilter.verify")) {
-            String targetString = args[0];
-            Player target = Bukkit.getPlayer(targetString);
             if (args.length == 1) {
+                String targetString = args[0];
+                Player target = Bukkit.getPlayer(targetString);
                 if (target == null) {
                     sender.sendMessage(ChatColor.RED + "Please provide a valid player");
                 } else {
