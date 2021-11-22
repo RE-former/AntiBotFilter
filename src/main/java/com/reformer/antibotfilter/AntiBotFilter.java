@@ -13,7 +13,7 @@ import java.util.UUID;
 
 public final class AntiBotFilter extends JavaPlugin {
 
-    public static HashMap<UUID, Inventory> playerVerify = new HashMap<>();
+    public static HashMap<UUID, String> playerVerify = new HashMap<>();
 
     @Override
     public void onEnable() {

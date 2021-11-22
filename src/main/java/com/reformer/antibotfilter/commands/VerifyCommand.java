@@ -2,6 +2,7 @@ package com.reformer.antibotfilter.commands;
 
 import com.reformer.antibotfilter.AntiBotFilter;
 import com.reformer.antibotfilter.VerificationFunctions;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,9 +16,14 @@ public class VerifyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender.hasPermission("antibotfilter.verify")) {
-            Player target = (Player) sender;
+            String targetString = args[0];
+            Player target = Bukkit.getPlayer(targetString);
             if (args.length == 1) {
-                VerificationFunctions.createVerificationInventory(plugin, target);
+                if (target == null) {
+                    sender.sendMessage(ChatColor.RED + "Please provide a valid player");
+                } else {
+                    VerificationFunctions.createVerificationInventory(plugin, target);
+                }
             } else {
                 sender.sendMessage(ChatColor.RED + "Please provide a player");
             }

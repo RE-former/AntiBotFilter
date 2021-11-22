@@ -15,7 +15,6 @@ public class InventoryClickListener implements Listener {
 
         Player p = (Player) e.getWhoClicked();
 
-
         if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the red pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.RED_STAINED_GLASS_PANE) {

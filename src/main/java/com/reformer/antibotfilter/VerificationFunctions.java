@@ -36,7 +36,7 @@ public class VerificationFunctions {
         }
 
         player.openInventory(inv);
-        AntiBotFilter.playerVerify.put(player.getUniqueId(), inv);
+        AntiBotFilter.playerVerify.put(player.getUniqueId(), randomColor);
 
         Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
             if (AntiBotFilter.playerVerify.containsKey(player.getUniqueId())) {
