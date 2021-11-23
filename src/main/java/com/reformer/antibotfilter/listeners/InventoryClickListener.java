@@ -19,7 +19,7 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.RED_STAINED_GLASS_PANE) {
 
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -32,7 +32,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the cyan pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.CYAN_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -45,7 +45,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the green pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.GREEN_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -58,7 +58,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the purple pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.PURPLE_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -71,7 +71,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the pink pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.PINK_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -84,7 +84,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the brown pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.BROWN_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -97,7 +97,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the yellow pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.YELLOW_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -110,7 +110,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the gray pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.GRAY_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -123,7 +123,7 @@ public class InventoryClickListener implements Listener {
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the black pane"))) {
             try {
                 if (e.getCurrentItem().getType() == Material.BLACK_STAINED_GLASS_PANE) {
-                    AntiBotFilter.playerVerify.remove(p.getUniqueId());
+                    AntiBotFilter.playerVerify.remove(p);
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {

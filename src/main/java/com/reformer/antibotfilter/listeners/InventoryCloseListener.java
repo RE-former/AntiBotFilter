@@ -16,7 +16,7 @@ public class InventoryCloseListener implements Listener {
         if (e.getPlayer() instanceof Player) {
             Player player = (Player) e.getPlayer();
             if (e.getView().getTitle().contains(ChatColor.translateAlternateColorCodes('&', "&2&lClick on the "))) {
-                if (AntiBotFilter.playerVerify.containsKey(player.getUniqueId())) {
+                if (AntiBotFilter.playerVerify.containsKey(player)) {
                     Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
                         player.openInventory(e.getInventory());
                     }, 2L);

@@ -35,14 +35,18 @@ public class VerificationFunctions {
             inv.setMaxStackSize(1);
         }
 
+
+
         player.openInventory(inv);
-        AntiBotFilter.playerVerify.put(player.getUniqueId(), randomColor);
+        AntiBotFilter.playerVerify.put(player, randomColor);
+
 
         Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
-            if (AntiBotFilter.playerVerify.containsKey(player.getUniqueId())) {
+            if (AntiBotFilter.playerVerify.containsKey(player)) {
                 player.kickPlayer(ChatColor.RED + "Took too long to verify. Please try again.");
             }
         }, time);
+
     }
 
 }
