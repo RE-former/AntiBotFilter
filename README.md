@@ -3,9 +3,9 @@
 
 **Description:**
 
-This is a very simple verification system plugin that shows a user a GUI with colors. If the user selects the correct answer, he gets granted to the server, otherwise he gets kicked. There is also an IP check with an API that you can disable in the config along with other things. More updates are to come soon.
+This is a very simple verification system plugin that shows a user a GUI with colours. If the user selects the correct answer, he gets granted to the server, otherwise he gets kicked. There is also an IP check with an API that you can disable in the config along with other things. More updates are to come soon.
 
-When the IP check is enabled use antibotfilter.ipbypass to bypass the check for certain players.
+When the IP check is enabled use antibotfilter.ipbypass to bypass the check for certain players. Use antibotfilter.guibypass to bypass verification.
 
 **Commands:**
 
@@ -17,7 +17,9 @@ When the IP check is enabled use antibotfilter.ipbypass to bypass the check for 
 2. Add plugin to your server
 3. Turn your server on
 4. Check the configuration plugin and configurate it to your needs
-5. Support and suggestions:
+
+**Support and suggestions:**
+
 Please keep all suggestions and questions to our [discord server](https://discord.gg/NjcFe3NaUE)
 
 **Plugin screenshots**
