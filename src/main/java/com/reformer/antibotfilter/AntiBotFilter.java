@@ -35,6 +35,9 @@ public final class AntiBotFilter extends JavaPlugin {
         if (!getConfig().contains("verifyOnlyOnFirstJoin")) {
             getConfig().set("verifyOnlyOnFirstJoin", true);
         }
+        if (!getConfig().contains("kickOnFirstJoin")) {
+            getConfig().set("kickOnFirstJoin", false);
+        }
         saveConfig();
 
         updateChecker();
@@ -45,9 +48,13 @@ public final class AntiBotFilter extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new InventoryClickListener(), this);
         getServer().getPluginManager().registerEvents(new InventoryCloseListener(), this);
         getServer().getPluginManager().registerEvents(new ChatListener(), this);
+        getServer().getPluginManager().registerEvents(new KickOnJoinListener(), this);
 
         // Registering commands
         getCommand("verify").setExecutor(new VerifyCommand());
+
+        // Loading metrics
+        Metrics metrics = new Metrics(this, 13370);
 
         // Plugin startup logic
         getLogger().info("AntiBotFilter started");
@@ -72,7 +79,6 @@ public final class AntiBotFilter extends JavaPlugin {
             getLogger().warning("Couldn't check for updates");
             e.printStackTrace();
         }
-
     }
 
     @Override

@@ -7,9 +7,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class InventoryClickListener implements Listener {
-
+    JavaPlugin plugin = AntiBotFilter.getPlugin(AntiBotFilter.class);
     @EventHandler
     public void onInvClick(InventoryClickEvent e) {
 
@@ -20,6 +21,9 @@ public class InventoryClickListener implements Listener {
                 if (e.getCurrentItem().getType() == Material.RED_STAINED_GLASS_PANE) {
 
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -33,6 +37,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.CYAN_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -46,6 +53,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.GREEN_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -59,6 +69,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.PURPLE_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -72,6 +85,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.PINK_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -85,6 +101,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.BROWN_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -98,6 +117,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.YELLOW_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -111,6 +133,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.GRAY_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
@@ -124,6 +149,9 @@ public class InventoryClickListener implements Listener {
             try {
                 if (e.getCurrentItem().getType() == Material.BLACK_STAINED_GLASS_PANE) {
                     AntiBotFilter.playerVerify.remove(p);
+                    if (plugin.getConfig().getBoolean("kickOnFirstJoin")) {
+                        KickOnJoinListener.needToVerify.remove(p.getName());
+                    }
                     p.closeInventory();
                     p.sendMessage(ChatColor.GREEN + "Successfully verified");
                 } else {
